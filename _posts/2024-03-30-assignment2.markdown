@@ -7,8 +7,6 @@ categories: jekyll update
 # A Short Data Story
 
 ## 1. Introduction
-**The story should have a brief introduction to the dataset so new readers from outside the class can understand what's going on.**
-
 ### 1.1 Dataset intro
 
 The dataset is a collection of incident reports from a police department database, detailing a wide array of incidents ranging from robbery to vehicle theft, arson, and assault. Each record includes unique identifiers, a general category and detailed description of the incident, the day of the week, date and time it occurred, the police district it took place in, and its resolution status. Additionally, the dataset encompasses a variety of location information, with specific emphasis on administrative and geographical divisions, categorizations of areas based on different criteria such as vulnerability, and details regarding specific zones and neighborhoods. This makes it a comprehensive source for analyzing crime patterns, police response, and public safety issues. 
