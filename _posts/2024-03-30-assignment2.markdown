@@ -81,10 +81,5 @@ plt.suptitle('Number Of Crimes Per Year',fontdict={'family':'serif'})
 plt.tight_layout()
 plt.show()
 ```
-<embed 
-       type="text/html" 
-       src="/public/time_series_plot.png"
-       width="1100"
-       height="600"
-       >
-</embed>
+
+![test](https://github.com/banishee/banishee.github.io/raw/main/public/time_series_plot.png)
