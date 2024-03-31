@@ -27,8 +27,6 @@ By navigating through this data, individuals can gain a clearer understanding of
 
 ![test](https://github.com/banishee/banishee.github.io/raw/main/public/time_series_plot.png)
 
-**Note:** 
-
 The graphs presented serve as a visual examination of five distinct crime categories within San Francisco, with a focus on identifying trends in the frequency of these crimes from 2003 to 2017. The categories showcased are Larceny/Theft, Stolen Property, Trespass, Vandalism, and Weapon Laws.
 
 A notable feature of these graphs is the use of color to emphasize the years that experienced the highest occurrence of crimes in each category—marked in red for immediate visibility. This color differentiation allows viewers to quickly discern patterns and potentially concerning increases in criminal activity over the last fifteen years.
@@ -44,8 +42,6 @@ The intention behind marking the three most prevalent years in red is to draw at
         width="1500"
         height="500"
         >
-
-**Note:**
 
 The plot visualizes a heat map of larceny/theft incidents across San Francisco, highlighting crime hotspots over a three-year period. The intensity of the colors ranges from blue to red, where warmer colors indicate higher frequencies of reported incidents. Areas with the most concentrated crime rates are encircled in red, allowing for quick identification of regions with the highest levels of larceny/theft. This map provides a clear, at-a-glance view of the spatial distribution of this particular crime category within the city's boundaries.
 
