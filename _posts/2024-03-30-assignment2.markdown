@@ -23,64 +23,8 @@ In a further effort to empower residents with detailed knowledge that could affe
 
 By navigating through this data, individuals can gain a clearer understanding of how crime rates vary across different neighborhoods and over time, potentially influencing their daily decisions and lifestyle choices. The ultimate goal of this webpage is to foster a well-informed community, where every resident has the tools and information needed to contribute to their own safety and the safety of their neighbors.
 
-## 2. Data Prepration
-```python
-import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
-
-import folium
-from folium.plugins import HeatMap
-
-from bokeh.io import output_notebook
-from bokeh.plotting import figure, show
-from bokeh.models import FactorRange, ColumnDataSource
-from bokeh.palettes import Category20
-```
-
-```python
-df=pd.read_csv("Police_Department_Incident_Reports__Historical_2003_to_May_2018_20240214.csv")
-df['Datetime']=pd.to_datetime(df.Date+' '+df.Time,format='%m/%d/%Y %H:%M')
-df=df[df.Datetime.dt.year!=2018]
-```
-
+## Visualizations
 ### 2.1 Time Series Plot
-**One time-series / bar chart (it's OK to use the "fancy" plot-typs like calendar plots or polar bar-charts from Week 2, Part 4)**
-```python
-focus_crimes_st = sorted(set(['LARCENY/THEFT','STOLEN PROPERTY','TRESPASS','VANDALISM','WEAPON LAWS']))
-```
-```python
-crime_cat_year=[]
-for crime in focus_crimes_st:
-    crime_cat_year.append(np.unique(df[df.Category==crime]['Datetime'].dt.year,return_counts=True))
-```
-```python
-plt.figure(figsize=(15,8))
-
-for i in range(len(focus_crimes_st)):
-    highest_values=np.partition(crime_cat_year[i][1],-3)[-3:]
-    
-    mask_highest = np.isin(crime_cat_year[i][1], highest_values)
-    colors = ['red' if m else 'green' for m in mask_highest]
-
-    plt.subplot(3,2,i+1)
-    plt.bar(crime_cat_year[i][0],crime_cat_year[i][1],alpha=0.5,color=colors)
-    plt.title(focus_crimes_st[i],fontsize=10,fontdict={'family':'serif'})
-    plt.ylabel('Occurences',fontdict={'family':'serif'})
-
-
-    plt.yticks(fontname='serif')
-    if (i == 3)|(i==4):
-        plt.xlabel('Year',fontdict={'family':'serif'})
-        plt.xticks(fontname='serif',ticks=crime_cat_year[i][0])
-    else:
-        plt.xlabel('')
-        plt.xticks(ticks=[])
-
-plt.suptitle('Number Of Crimes Per Year',fontdict={'family':'serif'})
-plt.tight_layout()
-plt.show()
-```
 
 ![test](https://github.com/banishee/banishee.github.io/raw/main/public/time_series_plot.png)
 
@@ -95,31 +39,6 @@ For Larceny/Theft, the graph exhibits a fluctuating trend but shows a significan
 The intention behind marking the three most prevalent years in red is to draw attention to the most critical periods, thus encouraging residents, policymakers, and law enforcement to delve deeper into the underlying causes. It also aids in focusing preventive measures and resources on those years that could be the harbinger of a continuing or emerging trend. This visual approach to presenting crime data is an essential tool in community awareness efforts and strategic planning for public safety.
 
 ### 2.2 Map Plot
-**One map (use techniques from Week 3 and 4)**
-```python
-map_SF=folium.Map([37.773972, -122.431297], tiles="CartoDB Positron",zoom_start=13)
-```
-```python
-df_Larceny=df[df.Category=='LARCENY/THEFT']
-
-df_Larceny_copy = df_Larceny.copy() 
-df_Larceny_copy.loc[:, 'Y'] = df_Larceny_copy['Y'].astype(float)
-df_Larceny_copy.loc[:, 'X'] = df_Larceny_copy['X'].astype(float)
-df_Larceny = df_Larceny_copy
-```
-```python
-heat_df = df_Larceny[df_Larceny['Datetime'].dt.year.isin([2015, 2016, 2017])]
-
-heat_df = heat_df[['Y', 'X']]
-heat_df = heat_df.dropna(axis=0, subset=['Y','X'])
-
-heat_data = [[row['Y'],row['X']] for index, row in heat_df.iterrows()]
-
-HeatMap(heat_data,radius=15).add_to(map_SF)
-```
-```python
-map_SF
-```
 <embed 
         type="text/html" 
         src="/public/map_SF.html"
