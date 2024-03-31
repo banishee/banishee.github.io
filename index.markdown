@@ -22,7 +22,7 @@ In a further effort to empower residents with detailed knowledge that could affe
 
 By navigating through this data, individuals can gain a clearer understanding of how crime rates vary across different neighborhoods and over time, potentially influencing their daily decisions and lifestyle choices. The ultimate goal of this webpage is to foster a well-informed community, where every resident has the tools and information needed to contribute to their own safety and the safety of their neighbors.
 
-## Visualizations
+## 2. Visualizations
 ### 2.1 Time Series Plot
 
 ![test](https://github.com/banishee/banishee.github.io/raw/main/public/time_series_plot.png)
