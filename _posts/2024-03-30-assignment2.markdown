@@ -6,14 +6,14 @@ categories: jekyll update
 ---
 # A Short Data Story
 
-## Introduction
+## 1. Introduction
 **The story should have a brief introduction to the dataset so new readers from outside the class can understand what's going on.**
 
-### Dataset intro
+### 1.1 Dataset intro
 
 The dataset is a collection of incident reports from a police department database, detailing a wide array of incidents ranging from robbery to vehicle theft, arson, and assault. Each record includes unique identifiers, a general category and detailed description of the incident, the day of the week, date and time it occurred, the police district it took place in, and its resolution status. Additionally, the dataset encompasses a variety of location information, with specific emphasis on administrative and geographical divisions, categorizations of areas based on different criteria such as vulnerability, and details regarding specific zones and neighborhoods. This makes it a comprehensive source for analyzing crime patterns, police response, and public safety issues. 
 
-### Website intro
+### 1.2 Website intro
 
 This web-page is designed as a vital resource for the residents of San Francisco, aiming to shed light on emerging crime trends within the city. Its primary objective is to equip citizens with current and comprehensive information on the types of crimes that are witnessing an uptick, enabling them to stay informed and vigilant.
 
@@ -23,7 +23,7 @@ In a further effort to empower residents with detailed knowledge that could affe
 
 By navigating through this data, individuals can gain a clearer understanding of how crime rates vary across different neighborhoods and over time, potentially influencing their daily decisions and lifestyle choices. The ultimate goal of this webpage is to foster a well-informed community, where every resident has the tools and information needed to contribute to their own safety and the safety of their neighbors.
 
-## Data Prepration
+## 2. Data Prepration
 ```python
 import numpy as np
 import pandas as pd
@@ -44,7 +44,7 @@ df['Datetime']=pd.to_datetime(df.Date+' '+df.Time,format='%m/%d/%Y %H:%M')
 df=df[df.Datetime.dt.year!=2018]
 ```
 
-## Time Series Plot
+### 2.1 Time Series Plot
 **One time-series / bar chart (it's OK to use the "fancy" plot-typs like calendar plots or polar bar-charts from Week 2, Part 4).**
 ```python
 focus_crimes_st = sorted(set(['LARCENY/THEFT','STOLEN PROPERTY','TRESPASS','VANDALISM','WEAPON LAWS']))
