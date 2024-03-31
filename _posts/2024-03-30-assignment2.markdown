@@ -126,7 +126,6 @@ map_SF
         width="1100"
         height="600"
         >
- </embed>
 
 **Note:**
 
