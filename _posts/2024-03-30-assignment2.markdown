@@ -40,7 +40,7 @@ The intention behind marking the three most prevalent years in red is to draw at
 <embed 
         type="text/html" 
         src="/public/map_SF.html"
-        width="750"
+        width="1000"
         height="500"
         >
 
