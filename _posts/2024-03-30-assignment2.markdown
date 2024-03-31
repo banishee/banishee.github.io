@@ -45,7 +45,7 @@ df=df[df.Datetime.dt.year!=2018]
 ```
 
 ### 2.1 Time Series Plot
-**One time-series / bar chart (it's OK to use the "fancy" plot-typs like calendar plots or polar bar-charts from Week 2, Part 4).**
+**One time-series / bar chart (it's OK to use the "fancy" plot-typs like calendar plots or polar bar-charts from Week 2, Part 4)**
 ```python
 focus_crimes_st = sorted(set(['LARCENY/THEFT','STOLEN PROPERTY','TRESPASS','VANDALISM','WEAPON LAWS']))
 ```
@@ -85,6 +85,7 @@ plt.show()
 ![test](https://github.com/banishee/banishee.github.io/raw/main/public/time_series_plot.png)
 
 **Note:** 
+
 The graphs presented serve as a visual examination of five distinct crime categories within San Francisco, with a focus on identifying trends in the frequency of these crimes from 2003 to 2017. The categories showcased are Larceny/Theft, Stolen Property, Trespass, Vandalism, and Weapon Laws.
 
 A notable feature of these graphs is the use of color to emphasize the years that experienced the highest occurrence of crimes in each category—marked in red for immediate visibility. This color differentiation allows viewers to quickly discern patterns and potentially concerning increases in criminal activity over the last fifteen years.
@@ -92,3 +93,41 @@ A notable feature of these graphs is the use of color to emphasize the years tha
 For Larceny/Theft, the graph exhibits a fluctuating trend but shows a significant rise towards the latter years. Stolen Property, Trespass, and Vandalism categories also reflect a rising trend, with recent years standing out, indicating a growing concern. The graph for Weapon Laws shows less variability over the years, but an uptick is still visible in the latter period.
 
 The intention behind marking the three most prevalent years in red is to draw attention to the most critical periods, thus encouraging residents, policymakers, and law enforcement to delve deeper into the underlying causes. It also aids in focusing preventive measures and resources on those years that could be the harbinger of a continuing or emerging trend. This visual approach to presenting crime data is an essential tool in community awareness efforts and strategic planning for public safety.
+
+### 2.2 Map Plot
+**One map (use techniques from Week 3 and 4)**
+```python
+map_SF=folium.Map([37.773972, -122.431297], tiles="CartoDB Positron",zoom_start=13)
+```
+```python
+df_Larceny=df[df.Category=='LARCENY/THEFT']
+
+df_Larceny_copy = df_Larceny.copy() 
+df_Larceny_copy.loc[:, 'Y'] = df_Larceny_copy['Y'].astype(float)
+df_Larceny_copy.loc[:, 'X'] = df_Larceny_copy['X'].astype(float)
+df_Larceny = df_Larceny_copy
+```
+```python
+heat_df = df_Larceny[df_Larceny['Datetime'].dt.year.isin([2015, 2016, 2017])]
+
+heat_df = heat_df[['Y', 'X']]
+heat_df = heat_df.dropna(axis=0, subset=['Y','X'])
+
+heat_data = [[row['Y'],row['X']] for index, row in heat_df.iterrows()]
+
+HeatMap(heat_data,radius=15).add_to(map_SF)
+```
+```python
+map_SF
+```
+<embed 
+        type="text/html" 
+        src="/public/map_SF.html"
+        width="1100"
+        height="600"
+        >
+ </embed>
+
+**Note:**
+
+The plot visualizes a heat map of larceny/theft incidents across San Francisco, highlighting crime hotspots over a three-year period. The intensity of the colors ranges from blue to red, where warmer colors indicate higher frequencies of reported incidents. Areas with the most concentrated crime rates are encircled in red, allowing for quick identification of regions with the highest levels of larceny/theft. This map provides a clear, at-a-glance view of the spatial distribution of this particular crime category within the city's boundaries.
