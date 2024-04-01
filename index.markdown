@@ -5,7 +5,7 @@
 layout: home
 title: San Francisco Crime Data Visualizations
 tags: [insight, analysis, visualization]
-cover-img: "/public/cover.jpeg"
+cover-img: "/public/cover.jpg"
 readtime: true
 ---
 
