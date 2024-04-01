@@ -5,6 +5,8 @@
 layout: home
 title: San Francisco Crime Data Visualizations
 tags: [insight, analysis, visualization]
+author: DTU 02806 Group Ass2 7
+readtime: true
 ---
 
 # Introduction
@@ -63,9 +65,7 @@ The chart allows for a comparative analysis of crime prevalence by district, wit
 
 # Conclusion
 
-The plot is a stacked bar chart representing the number of reported crimes across various police districts in San Francisco from 2015 to 2017. Each bar corresponds to a specific crime category, such as Larceny/Theft, Stolen Property, Trespass, Vandalism, and Weapon Laws, and is segmented by color to indicate the volume of incidents reported in each police district.
 
-The chart allows for a comparative analysis of crime prevalence by district, with the length of the colored segments within each bar proportional to the count of crimes for that district. For instance, a larger segment in a bar suggests a higher number of reported incidents for that category in the corresponding district. This visual tool is beneficial for identifying which districts face higher crime rates and which specific types of crime are most common in each area, thereby informing law enforcement and community efforts to address public safety.
 
 ---
 
