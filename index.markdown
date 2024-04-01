@@ -65,8 +65,9 @@ The chart allows for a comparative analysis of crime prevalence by district, wit
 
 # Conclusion
 
-Looking through the whole
+Looking through the whole visualization, from 2015 to 2017, Larceny/Theft crime displays a great significant data higher than other types. Also, these three years are the period when the highest number of crimes were committed, and the period when most of other type crimes were commited in a large quantitiy, except Stolen Property. According to the heatmap and bokeh plot, it illustrate that Southern, Northern, Central have the extremely high number of Larceny/Theft crime than other police districts, aligning with our observation.  
 
+The prevalence of larceny/theft crimes in Los Angeles over other types of criminal activities can be attributed to several factors. It's important to consider that such trends can vary year by year and are influenced by a multitude of factors including law enforcement strategies, community programs, and socioeconomic conditions. For a deeper understanding of crime patterns in Los Angeles and the measures being taken to address them, we might want to explore resources in other aspects in the future.
 
 ---
 
