@@ -5,7 +5,7 @@
 layout: home
 title: San Francisco Crime Data Visualizations
 tags: [insight, analysis, visualization]
-author: DTU 02806 Group Ass2 7
+cover-img: "/public/cover.jpeg"
 readtime: true
 ---
 
