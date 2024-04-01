@@ -65,14 +65,19 @@ The chart allows for a comparative analysis of crime prevalence by district, wit
 
 # Conclusion
 
+The article on San Francisco Crime Data Visualizations offers a comprehensive and insightful overview of the city's crime landscape, utilizing a dataset that spans incidents reported from a police department database. This dataset, encompassing a wide range of incidents from theft to assault, is presented on a webpage designed to inform San Francisco residents about emerging crime trends, thereby promoting vigilance and community safety.
+
+The webpage provides an accessible medium for visualizing crime data through graphs and maps, highlighting trends in crime categories such as Larceny/Theft, Stolen Property, Trespass, Vandalism, and Weapon Laws from 2003 to 2017. These visualizations use color coding to underscore years with peak crime rates, making it easier for residents to identify and understand the fluctuations and patterns in criminal activities over time.
+
+Furthermore, the article introduces an interactive heat map that illustrates the spatial distribution of larceny/theft incidents across the city, identifying high-crime hotspots. An additional interactive bar chart allows for a district-wise comparison of crime prevalence, aiding in the identification of areas that may require more focused law enforcement and community safety efforts.
+
+In conclusion, the San Francisco Crime Data Visualizations serve as a crucial tool for community awareness, empowering residents with the knowledge to assess personal risk and contribute to neighborhood safety. By offering detailed insights into the city's crime dynamics, the visualizations foster a well-informed community poised to tackle public safety challenges more effectively.
 
 
 ---
 
 ### Contribution
-
+We all designed the graph and chosed a best one to be presented due to the limitation of content.
 * Magnus Mac Doberenz: bokeh plot
 * Shakir Maytham Shake: time series plot, map Plot, introduction
 * Yili Ge: conclusion, graph adjustment, website beautify
-
-We all designed the graph and chosed a best one to be presented.
