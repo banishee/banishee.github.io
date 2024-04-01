@@ -71,7 +71,7 @@ Looking through the whole
 ---
 
 ### Contribution
-We all designed the graph and chosed a best one to be presented due to the limitation of content.
+We all designed the graphs and chose a best one to be presented due to the limitation of content.
 
 | Name | Introduction | Time Series Plot | Map Plot | Bokeh Plot | Conclusion | Website Beautify|
 |----------|----------|----------|----------|----------|----------|----------|
