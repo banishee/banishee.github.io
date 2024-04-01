@@ -52,7 +52,7 @@ The plot visualizes a heat map of larceny/theft incidents across San Francisco, 
 ## Interactive Bokeh Plot
 <embed 
         type="text/html" 
-        src="/public/Bokeh_Plot_1.html"
+        src="/public/bokeh_plot.html"
         width="800"
         height="600"
         >
