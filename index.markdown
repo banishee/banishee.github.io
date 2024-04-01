@@ -79,5 +79,5 @@ In conclusion, the San Francisco Crime Data Visualizations serve as a crucial to
 ### Contribution
 We all designed the graph and chosed a best one to be presented due to the limitation of content.
 * Magnus Mac Doberenz: bokeh plot
-* Shakir Maytham Shake: time series plot, map Plot, introduction
+* Shakir Maytham Shake: time series plot, map plot, introduction
 * Yili Ge: conclusion, graph adjustment, website beautify
