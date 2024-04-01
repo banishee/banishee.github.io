@@ -71,3 +71,8 @@ The chart allows for a comparative analysis of crime prevalence by district, wit
 
 ### Contribution
 
+* Magnus Mac Doberenz: bokeh plot
+* Shakir Maytham Shake: time series plot, map Plot, introduction
+* Yili Ge: conclusion, graph adjustment, website beautify
+
+We all designed the graph and chosed a best one to be presented.
